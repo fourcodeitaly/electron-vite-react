@@ -1,22 +1,14 @@
 export interface Employee {
-  id: string;
-  firstName: string;
-  lastName: string;
+  id: number;
+  name: string;
   email: string;
   phone: string;
-  department: string;
   position: string;
-  hireDate: string;
+  department: string;
   salary: number;
-  status: "active" | "on_leave" | "terminated";
-  avatar?: string;
+  startDate: string;
+  status: string;
+  location: string;
+  avatar: string;
+  bio: string;
 }
-
-export interface Department {
-  id: string;
-  name: string;
-  description: string;
-  managerId?: string;
-}
-
-export type EmployeeFormData = Omit<Employee, "id">;
