@@ -122,8 +122,10 @@ export default function EmployeeManagement() {
     <ProtectedRoute>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
         <div className="flex">
-          <Sidebar activeView={activeView} onViewChange={setActiveView} />
-          <div className="flex-1 p-6">
+          <div className="fixed left-0 top-0 h-screen">
+            <Sidebar activeView={activeView} onViewChange={setActiveView} />
+          </div>
+          <div className="flex-1 p-6 ml-96">
             <div className="mb-8">
               <h1 className="text-4xl font-bold text-slate-800 mb-2">
                 {t("Employee Management")}

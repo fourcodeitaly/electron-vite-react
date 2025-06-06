@@ -21,9 +21,11 @@ import {
   Clock,
   AlertTriangle,
   Users,
+  Languages,
 } from "lucide-react";
 import type { Employee } from "@/lib/employee-store";
 import { useTranslation } from "@/hooks/use-translate";
+import { useLanguage } from "@/lib/language-provider";
 
 interface EmployeeListProps {
   employees: Employee[];
@@ -41,6 +43,7 @@ export default function EmployeeList({
   onEditEmployee,
 }: EmployeeListProps) {
   const { t } = useTranslation();
+  const { language, setLanguage } = useLanguage();
   const [filteredEmployees, setFilteredEmployees] = useState(employees);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -89,7 +92,16 @@ export default function EmployeeList({
             {t("{count} employees found", { count: filteredEmployees.length })}
           </p>
         </div>
+
         <div className="flex gap-4 items-center">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setLanguage(language === "vi" ? "zh" : "vi")}
+            className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white hover:text-white"
+          >
+            <Languages className="w-4 h-4" />
+          </Button>
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-4 h-4" />
             <Input
@@ -123,7 +135,7 @@ export default function EmployeeList({
               </div>
             )}
 
-            <CardHeader className="pb-4">
+            <CardHeader className="pb-4 cursor-pointer">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                   <Avatar className="w-12 h-12">
@@ -142,16 +154,6 @@ export default function EmployeeList({
                       {employee.employeeNumber}
                     </p>
                   </div>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={(e) => handleEditClick(employee.id, e)}
-                    className="h-8 w-8 p-0"
-                  >
-                    <Edit className="w-4 h-4" />
-                  </Button>
                 </div>
               </div>
             </CardHeader>

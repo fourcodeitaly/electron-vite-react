@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Lock, User, AlertCircle } from "lucide-react";
+import { Lock, User, AlertCircle, Languages } from "lucide-react";
 import { useAuth } from "@/lib/auth-context";
 import { useTranslation } from "@/hooks/use-translate";
 import { useLanguage } from "@/hooks/use-language";
@@ -56,8 +56,9 @@ export default function LoginPage() {
               onClick={() => {
                 setLanguage(language === "vi" ? "zh" : "vi");
               }}
+              className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white hover:text-white"
             >
-              {t("Change language")}
+              <Languages className="w-4 h-4" />
             </Button>
           </div>
           <CardTitle className="text-2xl font-bold">
@@ -106,7 +107,7 @@ export default function LoginPage() {
             </div>
             <Button
               type="submit"
-              className="bg-blue-600 hover:bg-blue-700"
+              className="bg-blue-600 hover:bg-blue-700 cursor-pointer"
               disabled={isLoading}
             >
               {isLoading ? t("Logging in...") : t("Login")}

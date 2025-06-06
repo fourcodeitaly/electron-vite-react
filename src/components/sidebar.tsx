@@ -64,7 +64,7 @@ export default function Sidebar({ activeView, onViewChange }: SidebarProps) {
   ];
 
   return (
-    <div className="w-80 bg-white border-r border-slate-200 p-6 space-y-6">
+    <div className="w-80 bg-white border-r border-slate-200 p-6 space-y-6 h-screen">
       {/* User Profile */}
       <div className="flex items-center space-x-3 pb-6 border-b">
         <Avatar>
@@ -78,9 +78,17 @@ export default function Sidebar({ activeView, onViewChange }: SidebarProps) {
             {/* {user?.role?.charAt(0).toUpperCase() + user?.role?.slice(1)} */}
           </p>
         </div>
-        <Button variant="ghost" size="icon" onClick={logout} title="Logout">
-          <LogOut className="h-4 w-4" />
-        </Button>
+        <div className="flex justify-end">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={logout}
+            title="Logout"
+            className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white hover:text-white"
+          >
+            <LogOut className="h-6 w-4" />
+          </Button>
+        </div>
       </div>
 
       {/* Header */}
@@ -103,7 +111,7 @@ export default function Sidebar({ activeView, onViewChange }: SidebarProps) {
             <Button
               key={item.id}
               variant={isActive ? "default" : "ghost"}
-              className={`w-full justify-start h-12 ${
+              className={`w-full justify-start h-12 cursor-pointer ${
                 isActive
                   ? "bg-blue-600 hover:bg-blue-700"
                   : "hover:bg-slate-100"
@@ -131,7 +139,7 @@ export default function Sidebar({ activeView, onViewChange }: SidebarProps) {
       {/* Add Employee Button */}
       <div className="pt-4 border-t border-slate-200">
         <Button
-          className="w-full bg-green-600 hover:bg-green-700"
+          className="w-full bg-green-600 hover:bg-green-700 cursor-pointer"
           onClick={() => onViewChange("employee-form")}
         >
           <UserPlus className="w-4 h-4 mr-2" />

@@ -187,7 +187,7 @@ export default function EmployeeForm({
         <Button
           variant="ghost"
           onClick={onBack}
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           {t("Back to Employee List")}
