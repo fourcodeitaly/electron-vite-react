@@ -199,7 +199,7 @@ export default function EmployeeList({
               </div>
               <div className="border-t">
                 <p className="text-lg font-semibold text-green-600">
-                  ${employee.salary.toLocaleString()}/year
+                  ${employee.salary.toLocaleString()}
                 </p>
                 <p className="text-xs text-slate-500">
                   {employee.employmentType}

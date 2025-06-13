@@ -143,6 +143,51 @@ export const translations = {
     "Select Probation Duration": "选择试用期时长",
     "Select End Date": "选择结束日期",
     "Select Employee Number": "选择员工编号",
+
+    // Gender
+    Male: "男",
+    Female: "女",
+    Other: "其他",
+    "Prefer not to say": "不愿透露",
+
+    // Marital Status
+    Single: "单身",
+    Married: "已婚",
+    Divorced: "离婚",
+    Separated: "分居",
+
+    // Account Type
+    Checking: "Checking",
+    Savings: "Savings",
+
+    // Employment Type
+    "Full-time": "Full-time",
+    "Part-time": "Part-time",
+    Contract: "Contract",
+
+    // Department
+    IT: "IT",
+    Product: "Product",
+    Design: "Design",
+    Analysis: "Analysis",
+    Marketing: "Marketing",
+    HR: "HR",
+    Finance: "Finance",
+    Business: "Business",
+
+    // Position
+    "Software Engineer": "Software Engineer",
+    "Product Manager": "Product Manager",
+    Designer: "Designer",
+    Analyst: "Analyst",
+    "Marketing Manager": "Marketing Manager",
+    "DevOps Manager": "DevOps Manager",
+    "HR Manager": "HR Manager",
+    "Finance Manager": "Finance Manager",
+    "Business Manager": "Business Manager",
+
+    // Employment Type
+    "Employment Type": "Employment Type",
   },
   vi: {
     // Common
@@ -292,5 +337,50 @@ export const translations = {
     "Select Probation Duration": "Chọn thời gian thử việc",
     "Select End Date": "Chọn ngày kết thúc",
     "Select Employee Number": "Chọn mã nhân viên",
+
+    // Gender
+    Male: "Nam",
+    Female: "Nữ",
+    Other: "Khác",
+    "Prefer not to say": "Không muốn tiết lộ",
+
+    // Marital Status
+    Single: "Độc thân",
+    Married: "Đã kết hôn",
+    Divorced: "Đã ly hôn",
+    Separated: "Đã ly thân",
+
+    // Account Type
+    Checking: "Tiền gửi",
+    Savings: "Tiền gửi",
+
+    // Employment Type
+    "Full-time": "Toàn thời gian",
+    "Part-time": "Bán thời gian",
+    Contract: "Hợp đồng",
+
+    // Department
+    IT: "IT",
+    Product: "Sản phẩm",
+    Design: "Thiết kế",
+    Analysis: "Phân tích",
+    Marketing: "Marketing",
+    HR: "Nhân sự",
+    Finance: "Tài chính",
+    Business: "Kinh doanh",
+
+    // Position
+    "Software Engineer": "Lập trình viên",
+    "Product Manager": "Quản lý sản phẩm",
+    Designer: "Thiết kế",
+    Analyst: "Phân tích",
+    "Marketing Manager": "Quản lý marketing",
+    "DevOps Manager": "Quản lý DevOps",
+    "HR Manager": "Quản lý nhân sự",
+    "Finance Manager": "Quản lý tài chính",
+    "Business Manager": "Quản lý kinh doanh",
+
+    // Employment Type
+    "Employment Type": "Loại hợp đồng",
   },
 };

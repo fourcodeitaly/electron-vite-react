@@ -448,11 +448,11 @@ export default function EmployeeForm({
                       <SelectValue placeholder={t("Select Gender")} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Nam">Nam</SelectItem>
-                      <SelectItem value="Nữ">Nữ</SelectItem>
-                      <SelectItem value="Khác">Khác</SelectItem>
-                      <SelectItem value="Không muốn tiết lộ">
-                        Không muốn tiết lộ
+                      <SelectItem value={t("Male")}>{t("Male")}</SelectItem>
+                      <SelectItem value={t("Female")}>{t("Female")}</SelectItem>
+                      <SelectItem value={t("Other")}>{t("Other")}</SelectItem>
+                      <SelectItem value={t("Prefer not to say")}>
+                        {t("Prefer not to say")}
                       </SelectItem>
                     </SelectContent>
                   </Select>
@@ -469,10 +469,16 @@ export default function EmployeeForm({
                       <SelectValue placeholder={t("Select Marital Status")} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Độc thân">Độc thân</SelectItem>
-                      <SelectItem value="Đã kết hôn">Đã kết hôn</SelectItem>
-                      <SelectItem value="Đã ly hôn">Đã ly hôn</SelectItem>
-                      <SelectItem value="Đã ly thân">Đã ly thân</SelectItem>
+                      <SelectItem value={t("Single")}>{t("Single")}</SelectItem>
+                      <SelectItem value={t("Married")}>
+                        {t("Married")}
+                      </SelectItem>
+                      <SelectItem value={t("Divorced")}>
+                        {t("Divorced")}
+                      </SelectItem>
+                      <SelectItem value={t("Separated")}>
+                        {t("Separated")}
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -676,8 +682,12 @@ export default function EmployeeForm({
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Checking">{t("Checking")}</SelectItem>
-                      <SelectItem value="Savings">{t("Savings")}</SelectItem>
+                      <SelectItem value={t("Checking")}>
+                        {t("Checking")}
+                      </SelectItem>
+                      <SelectItem value={t("Savings")}>
+                        {t("Savings")}
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -766,8 +776,8 @@ export default function EmployeeForm({
                     </SelectTrigger>
                     <SelectContent>
                       {positions.map((pos) => (
-                        <SelectItem key={pos} value={pos}>
-                          {pos}
+                        <SelectItem key={t(pos)} value={t(pos)}>
+                          {t(pos)}
                         </SelectItem>
                       ))}
                     </SelectContent>
@@ -784,8 +794,8 @@ export default function EmployeeForm({
                     </SelectTrigger>
                     <SelectContent>
                       {departments.map((dept) => (
-                        <SelectItem key={dept} value={dept}>
-                          {dept}
+                        <SelectItem key={t(dept)} value={t(dept)}>
+                          {t(dept)}
                         </SelectItem>
                       ))}
                     </SelectContent>
@@ -803,14 +813,16 @@ export default function EmployeeForm({
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Full-time">
+                      <SelectItem value={t("Full-time")}>
                         {t("Full-time")}
                       </SelectItem>
-                      <SelectItem value="Part-time">
+                      <SelectItem value={t("Part-time")}>
                         {t("Part-time")}
                       </SelectItem>
-                      <SelectItem value="Contract">{t("Contract")}</SelectItem>
-                      <SelectItem value="Intern">{t("Intern")}</SelectItem>
+                      <SelectItem value={t("Contract")}>
+                        {t("Contract")}
+                      </SelectItem>
+                      <SelectItem value={t("Intern")}>{t("Intern")}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
